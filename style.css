@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    color:#000;
+    font-family: raleway, sans-serif;
+    font-size: 16px;
+}
+ul {
+    margin:0;
+    padding: 0;
+}
+/* Fonts */
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/raleway-regular-webfont.eot');
+    src: url('fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway/raleway-regular-webfont.woff') format('woff'),
+         url('fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
+         url('fonts/raleway/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* Header */
+header {
+    max-width: 1340px;
+    margin: auto;
+}
+#logo {
+    width: 100px;
+    height: auto;
+    margin-top: 40px;
+}
+nav {
+    float: right;
+}
+nav ul {
+    display: flex;
+}
+.list-menu {
+    list-style: none;
+}
+.list-menu a {
+    padding:49px 20px 0;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border-top:1px solid #fff;
+}
+#inscription {
+    text-decoration: none;
+    font-weight: bold;
+    color:#0065FC;
+    float: right;
+    padding:50px 0 0 20px;
+}
+.list-menu a:hover {
+    color:#0065FC
+}
+.list-menu a:focus  {
+    border-top:1px solid #0065FC;
+    color: #0065FC;
+}
+/* Responsive */
+/* Header */
+@media all and (max-width: 1360px) {
+    #logo {
+        margin:40px 0 0 20px;
+    }
+    #inscription {
+        padding:50px 20px 0px 20px;
+    
+    }
+}
+@media all and (max-width: 576px) {
+    nav {
+        float: none;
+    }
+    nav ul {
+        justify-content: center;
+    }
+    .list-menu {
+        width: 100%;
+        text-align: center;
+    }
+    .list-menu a {
+        padding:40px 20px 19px;
+        border-top:none;
+        border-bottom:1px solid #f2f2f2;
+    }
+    .list-menu a:focus  {
+        border-top:none;
+        border-bottom:1px solid #0065FC;
+    }
+}
