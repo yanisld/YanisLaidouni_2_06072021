@@ -4,9 +4,26 @@ body {
     font-family: raleway, sans-serif;
     font-size: 16px;
 }
-ul {
+ul, h1, h2 {
     margin:0;
     padding: 0;
+}
+section {
+    max-width: 1340px;
+    margin:40px auto 0;
+    line-height: 30px;
+}
+h1 {
+    font-family: 'ralewaybold', sans-serif;
+}
+h2 {
+    font-size: 16px;
+    font-weight: inherit;
+}
+input, button {
+    font-family: 'ralewaybold', sans-serif;
+    font-size: 16px;
+    border: none;
 }
 /* Fonts */
 @font-face {
@@ -17,6 +34,18 @@ ul {
          url('fonts/raleway/raleway-regular-webfont.woff') format('woff'),
          url('fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
          url('fonts/raleway/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('fonts/raleway/raleway-bold-webfont.eot');
+    src: url('fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway/raleway-bold-webfont.woff2') format('woff2'),
+         url('fonts/raleway/raleway-bold-webfont.woff') format('woff'),
+         url('fonts/raleway/raleway-bold-webfont.ttf') format('truetype'),
+         url('fonts/raleway/raleway-bold-webfont.svg#ralewaybold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -49,7 +78,7 @@ nav ul {
 }
 #inscription {
     text-decoration: none;
-    font-weight: bold;
+    font-family: 'ralewaybold', sans-serif;
     color:#0065FC;
     float: right;
     padding:50px 0 0 20px;
@@ -61,8 +90,73 @@ nav ul {
     border-top:1px solid #0065FC;
     color: #0065FC;
 }
+/* Recherche */
+#recherche .fa-map-marker-alt {
+    background-color: #f2f2f2;
+    padding: 17px;
+    border-radius: 15px 0 0 15px;
+}
+#recherche input {
+    padding:15px;
+    border: 1px solid #f2f2f2;
+}
+#recherche button {
+    background-color: #0065FC;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid #0065FC;
+    border-radius: 0 15px 15px 0;
+}
+#recherche #recherche-responsive {
+    display:none;
+    position: relative;
+    border-radius: 15px 15px 15px 15px;
+    right: 9px;
+}
+#bloc-filtre, #filtre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#bloc-filtre span {
+    font-family: 'ralewaybold', sans-serif;
+}
+#filtre div {
+    margin: 5px 8px;
+}
+#filtre i {
+    padding: 14px;
+    background-color: #deebff;
+    color: #0065FC;
+    border-radius: 50%;
+    position:relative;
+    right:3px;
+}
+#filtre .fa-child {
+    padding: 13px 16px;
+}
+#filtre .fa-heart {
+    padding: 14px 15px;
+}
+#filtre button {
+    background-color: #fff;
+    padding: 0px 19px 0px 0px;
+    border: 2px solid #f2f2f2;
+    border-radius: 25px;
+}
+#filtre button:hover {
+    background-color: #0065FC;
+    color:#fff;
+    border: 2px solid #deebff;
+}
+#info .fa-info {
+    margin: 0 10px 0 0;
+    padding: 5px 10px;
+    border: 2px solid #f2f2f2;
+    border-radius: 50%;
+    color: #0065FC;
+}
 /* Responsive */
-/* Header */
 @media all and (max-width: 1360px) {
     #logo {
         margin:40px 0 0 20px;
@@ -70,6 +164,9 @@ nav ul {
     #inscription {
         padding:50px 20px 0px 20px;
     
+    }
+    section {
+        padding:0px 20px 0;
     }
 }
 @media all and (max-width: 576px) {
@@ -91,5 +188,14 @@ nav ul {
     .list-menu a:focus  {
         border-top:none;
         border-bottom:1px solid #0065FC;
+    }
+    #recherche {
+        text-align: center;
+    }
+    #recherche #recherche-desktop {
+        display:none;
+    }
+    #recherche #recherche-responsive {
+        display:initial;
     }
 }

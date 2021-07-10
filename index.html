@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/all.css" rel="stylesheet">
         <title>Reservia</title>
     </head>
     <body>
@@ -13,9 +14,25 @@
                 <ul>
                     <li class="list-menu"><a href="#">Hébergement</a></li>
                     <li class="list-menu"><a href="index.html">Activités</a></li>
-                    <!--<li id="inscription" class="list-menu"><a href="index.html">S'inscrire</a></li>-->
                 </ul>              
             </nav>
         </header>
+        <section>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <h2>En plein centre ville ou en pleine nature</h2>
+            <p id="recherche">
+                <i class="fas fa-map-marker-alt"></i><input type="text" value="Marseille, France"><button id="recherche-desktop" type="button">Rechercher</i></button><button id="recherche-responsive" type="button"><i class="fas fa-search"></i></button>
+            </p>
+            <div id="bloc-filtre">
+                <span>Filtres</span>
+                <div id="filtre">
+                    <div><button type="button"><i class="fas fa-money-bill-wave"></i>Économique</button></div>
+                    <div><button type="button"><i class="fas fa-child"></i>Familiale</button></div>
+                    <div><button type="button"><i class="fas fa-heart"></i>Romantique</button></div>
+                    <div><button type="button"><i class="fas fa-dog"></i>Animaux autorisés</button></div> 
+                </div>
+            </div>
+            <p id="info"><i class="fas fa-info"></i><span>Plus de 500 logements sont disponibles dans cette ville</span></p>
+        </section>
     </body>
 </html>
