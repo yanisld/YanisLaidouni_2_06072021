@@ -3,6 +3,7 @@ body {
     color:#000;
     font-family: raleway, sans-serif;
     font-size: 16px;
+    line-height: 26px;
 }
 ul, h1, h2 {
     margin:0;
@@ -10,10 +11,9 @@ ul, h1, h2 {
 }
 section {
     max-width: 1340px;
-    margin:40px auto 0;
-    line-height: 30px;
+    margin:40px auto 0;  
 }
-h1 {
+h1, h3 {
     font-family: 'ralewaybold', sans-serif;
 }
 h2 {
@@ -24,6 +24,10 @@ input, button {
     font-family: 'ralewaybold', sans-serif;
     font-size: 16px;
     border: none;
+}
+a {
+    text-decoration: none;
+    color:#000;
 }
 /* Fonts */
 @font-face {
@@ -72,12 +76,9 @@ nav ul {
 .list-menu a {
     padding:49px 20px 0;
     display: block;
-    text-decoration: none;
-    color: #000;
     border-top:1px solid #fff;
 }
 #inscription {
-    text-decoration: none;
     font-family: 'ralewaybold', sans-serif;
     color:#0065FC;
     float: right;
@@ -156,6 +157,105 @@ nav ul {
     border-radius: 50%;
     color: #0065FC;
 }
+/* Hebergement */
+#hebergements {
+    display: flex;
+    align-items: baseline;
+}
+#hebergements p {
+    margin:0;
+}
+#hebergements p span {
+    font-family: ralewaybold, sans-serif;
+}
+#hebergements-lieu, aside {
+    background-color: #f2f2f2;
+    padding:20px 25px;
+    border-radius: 25px;
+}
+#hebergements-lieu {
+    margin: 0 40px 0 0;
+    flex:2.3;
+}
+aside {
+    flex:1;
+}
+#carte-hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.carte {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px;
+    max-width: 246px;
+    margin: 0 0px 30px;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.carte .img-carte {
+    overflow: hidden;
+    height: 115px;
+    border-radius: 25px 25px 0 0;
+}
+.carte .img-carte img {
+    width: 100%;
+}
+.carte .texte-carte {
+    padding: 8px;
+}
+.carte p {
+    margin: 0;
+}
+.notation {
+    display: flex;
+}
+.notation li {
+    list-style: none;
+    color:#0065FC;
+}
+.notation-4 li:last-child,
+.notation-3 li:last-child,
+.notation-3 li:nth-child(4) {
+    color:#e2e2e2;
+}
+#titre-populaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-chart-line {
+    font-size: 21px;
+}
+aside .carte-populaire {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0 auto 30px;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    height:135px;
+}
+aside .img-carte {
+    overflow: hidden;
+    border-radius: 25px 0 0 25px;
+    flex:1.9;
+}
+aside .img-carte img {
+    border-radius: 25px 0 0 25px;
+    width: 100%;
+    height: 100%;
+}
+aside .carte-populaire .texte-carte {
+    display: flex;
+    flex-direction: column;
+    padding:8px;
+    flex: 2;
+}
 /* Responsive */
 @media all and (max-width: 1360px) {
     #logo {
@@ -168,6 +268,35 @@ nav ul {
     section {
         padding:0px 20px 0;
     }
+    #hebergements-lieu {
+        margin: 0 10px 0 0;
+    }
+}
+@media all and (max-width: 1251px) {
+    #carte-hebergements {
+        justify-content: space-around;
+    }
+}
+@media all and (max-width: 990px) {
+    #hebergements {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column-reverse;
+        padding:0;
+    }
+    #hebergements-lieu {
+        margin: 0 0 0 0;
+        background-color: transparent;
+    }
+    #carte-hebergements {
+        justify-content: space-around;
+    }
+    aside {
+        border-radius: 0;
+    }
+    .carte-populaire {
+        max-width: 500px;
+    }
 }
 @media all and (max-width: 576px) {
     nav {
@@ -175,6 +304,7 @@ nav ul {
     }
     nav ul {
         justify-content: center;
+        margin: 1px;
     }
     .list-menu {
         width: 100%;
@@ -197,5 +327,8 @@ nav ul {
     }
     #recherche #recherche-responsive {
         display:initial;
+    }
+    .carte {
+        max-width: 100%;
     }
 }
