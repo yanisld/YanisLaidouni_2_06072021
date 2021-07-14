@@ -29,6 +29,9 @@ a {
     text-decoration: none;
     color:#000;
 }
+span {
+    font-family: 'ralewaybold', sans-serif;
+}
 /* Fonts */
 @font-face {
     font-family: 'raleway';
@@ -119,9 +122,6 @@ nav ul {
     flex-wrap: wrap;
     align-items: center;
 }
-#bloc-filtre span {
-    font-family: 'ralewaybold', sans-serif;
-}
 #filtre div {
     margin: 5px 8px;
 }
@@ -164,9 +164,6 @@ nav ul {
 }
 #hebergements p {
     margin:0;
-}
-#hebergements p span {
-    font-family: ralewaybold, sans-serif;
 }
 #hebergements-lieu, aside {
     background-color: #f2f2f2;
@@ -256,6 +253,50 @@ aside .carte-populaire .texte-carte {
     padding:8px;
     flex: 2;
 }
+/* Activites */
+#activite {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bloc-activite {
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    justify-content: space-around;
+}
+.bloc-2-activite {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.carte-activite {
+    border-radius: 25px;
+    margin: 0;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.img-activite {
+    overflow: hidden;
+}
+.img-activite {
+    max-width: 300px;
+    height:134px;
+    border-radius: 25px 25px 0 0;
+}
+.img-1-activite {
+    height: 390px;
+}
+.texte-activite {
+    padding:5px;
+}
+.texte-activite p {
+    margin:0;
+    padding: 10px 25px 15px;
+}
 /* Responsive */
 @media all and (max-width: 1360px) {
     #logo {
@@ -277,6 +318,18 @@ aside .carte-populaire .texte-carte {
         justify-content: space-around;
     }
 }
+@media all and (max-width: 1239px) {
+    #activite {
+        justify-content: center;
+    }
+    .bloc-activite { 
+        flex:initial;
+        justify-content: center;
+    }
+    .carte-activite {
+        margin: 0 10px 20px;
+    }
+}
 @media all and (max-width: 990px) {
     #hebergements {
         display: flex;
@@ -296,6 +349,20 @@ aside .carte-populaire .texte-carte {
     }
     .carte-populaire {
         max-width: 500px;
+    }
+}
+@media all and (max-width: 679px) {
+    .img-1-activite {
+        height:134px;
+    }
+    .carte-activite {
+        margin: 0 0 20px;
+    }
+    .bloc-activite,
+    .bloc-2-activite,
+    .carte-activite,
+    .img-activite {
+        max-width: 100%;    
     }
 }
 @media all and (max-width: 576px) {
