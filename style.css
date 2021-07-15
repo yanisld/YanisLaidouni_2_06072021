@@ -182,12 +182,14 @@ aside {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+#carte-hebergements a {
+    margin: 0 0px 30px;
+}
 .carte {
     background-color: #fff;
     border-radius: 25px;
     padding: 5px;
     max-width: 246px;
-    margin: 0 0px 30px;
     box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -196,9 +198,37 @@ aside {
     overflow: hidden;
     height: 115px;
     border-radius: 25px 25px 0 0;
+    width:246px;
 }
-.carte .img-carte img {
-    width: 100%;
+#auberge-la-cannebiere {
+    background: url('images/hebergements/auberge-la-cannebiere.jpg');  
+    background-position: center;
+    background-size: 100%;
+}
+#hotel-du-port {
+    background: url('images/hebergements/hotel-du-port.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#hotel-les-mouettes {
+    background: url('images/hebergements/hotel-les-mouettes.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#hotel-de-la-mer {
+    background: url('images/hebergements/hotel-de-la-mer.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#auberge-le-panier {
+    background: url('images/hebergements/auberge-le-panier.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#hotel-chez-amina {
+    background: url('images/hebergements/hotel-chez-amina.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .carte .texte-carte {
     padding: 8px;
@@ -239,12 +269,22 @@ aside .carte-populaire {
 aside .img-carte {
     overflow: hidden;
     border-radius: 25px 0 0 25px;
-    flex:1.9;
+    flex:1.3;
 }
-aside .img-carte img {
-    border-radius: 25px 0 0 25px;
-    width: 100%;
-    height: 100%;
+#hotel-le-soleil-du-matin {
+    background: url('images/hebergements/hotel-le-soleil-du-matin.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#au-coeur-de-leau {
+    background: url('images/hebergements/au-coeur-de-leau.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#hotel-tout-bleu {
+    background: url('images/hebergements/hotel-tout-bleu.jpg');
+    background-position: center;
+    background-size: cover;
 }
 aside .carte-populaire .texte-carte {
     display: flex;
@@ -282,12 +322,41 @@ aside .carte-populaire .texte-carte {
     overflow: hidden;
 }
 .img-activite {
-    max-width: 300px;
+    width: 300px;
     height:134px;
     border-radius: 25px 25px 0 0;
 }
 .img-1-activite {
     height: 390px;
+}
+#vieux-port {
+    background: url('images/activites/vieux-port.jpg');
+    background-position: center;
+}
+#pomegues {
+    background: url('images/activites/pomegues.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#frioul {
+    background: url('images/activites/frioul.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#calanques {
+    background: url('images/activites/calanques.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#notre-dame {
+    background: url('images/activites/notre-dame.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#longchamp {
+    background: url('images/activites/longchamp.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .texte-activite {
     padding:5px;
@@ -331,12 +400,20 @@ footer div ul li:first-child {
         margin: 0 10px 0 0;
     }
 }
-@media all and (max-width: 1251px) {
+@media all and (max-width: 1268px) {
     #carte-hebergements {
         justify-content: space-around;
     }
+    #titre-hebergement {
+        max-width: 630px;
+        margin: 20px auto;
+    }
 }
-@media all and (max-width: 1239px) {
+@media all and (max-width: 1257px) {
+    #titre-activite {
+        margin: 20px auto;
+        max-width: 640px;
+    }
     #activite {
         justify-content: center;
     }
@@ -344,7 +421,7 @@ footer div ul li:first-child {
         flex:initial;
         justify-content: center;
     }
-    .carte-activite {
+    .bloc-activite a {
         margin: 0 10px 20px;
     }
 }
@@ -354,6 +431,10 @@ footer div ul li:first-child {
         align-items: stretch;
         flex-direction: column-reverse;
         padding:0;
+    }
+    #titre-hebergement {
+        max-width: 865px;
+        margin: 20px auto;
     }
     #hebergements-lieu {
         margin: 0 0 0 0;
@@ -368,6 +449,10 @@ footer div ul li:first-child {
     .carte-populaire {
         max-width: 500px;
     }
+    #titre-populaire {
+        max-width: 510px;
+        margin: auto;
+    }
     footer div {
         justify-content: space-between;
     }
@@ -375,24 +460,48 @@ footer div ul li:first-child {
         flex: initial;
     }
 }
-@media all and (max-width: 679px) {
+@media all and (max-width: 695px) {
+    .bloc-activite a {
+        margin: 0 0 20px;
+    }
     .img-1-activite {
         height:134px;
     }
-    .carte-activite {
-        margin: 0 0 20px;
-    }
     .bloc-activite,
+    .bloc-activite a,
     .bloc-2-activite,
     .carte-activite,
     .img-activite {
-        max-width: 100%;    
+        width: 100%;    
+    }
+    #vieux-port {
+        background-size: cover;
+    }
+    #calanques {
+        background-size: cover;
+    }
+    #pomegues {
+        background: url('images/activites/pomegues-2.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    #longchamp {
+        background: url('images/activites/longchamps-2.jpg');
+        background-position: center;
+        background-size: cover;
     }
     footer div {
         flex-direction: column;
     }
     footer div ul {
         margin:0 0 50px 0;
+    }
+}
+@media all and (max-width: 579px) {
+    #carte-hebergements a,
+    #carte-hebergements .carte,
+    #carte-hebergements .img-carte {
+        width:100%;
     }
 }
 @media all and (max-width: 576px) {
@@ -427,5 +536,8 @@ footer div ul li:first-child {
     }
     .carte {
         max-width: 100%;
+    }
+    .bloc-activite a {
+        margin: 0 0 20px;
     }
 }
