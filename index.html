@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/all.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
         <title>Reservia</title>
     </head>
     <body>
         <header>
-            <img id="logo" src="images/reservia-logo.png"/>
+            <h1 id="titre-logo">Reservia</h1>        
             <a id="inscription" href="index.html">S'inscrire</a>   
             <nav>
                 <ul>
@@ -18,10 +22,10 @@
             </nav>
         </header>
         <section>
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <h2>En plein centre ville ou en pleine nature</h2>
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <h3>En plein centre ville ou en pleine nature</h3>
             <p id="recherche">
-                <i class="fas fa-map-marker-alt"></i><input type="text" value="Marseille, France"><button id="recherche-desktop" type="button">Rechercher</i></button><button id="recherche-responsive" type="button"><i class="fas fa-search"></i></button>
+                <i class="fas fa-map-marker-alt"></i><input type="text" value="Marseille, France"><button id="recherche-desktop" type="button">Rechercher</button><button id="recherche-responsive" type="button"><i class="fas fa-search"></i></button>
             </p>
             <div id="bloc-filtre">
                 <span>Filtres</span>
@@ -36,7 +40,7 @@
         </section>
         <section id="hebergements">
             <div id="hebergements-lieu">
-            <h3 id="titre-hebergement">Hébergements à Marseille</h3>
+            <h4 id="titre-hebergement">Hébergements à Marseille</h4>
                 <div id="carte-hebergements">
                     <a href="">
                         <div class="carte">   
@@ -138,7 +142,7 @@
                 <p><span><a href="#">Afficher plus</a></span></p>
             </div>
             <aside>
-                <div id="titre-populaire"><h3>Les plus populaires</h3><i class="fas fa-chart-line"></i></div>
+                <div id="titre-populaire"><h4>Les plus populaires</h4><i class="fas fa-chart-line"></i></div>
                 <a href="">
                     <div class="carte-populaire">
                         <div id="hotel-le-soleil-du-matin" class="img-carte"></div>
@@ -190,7 +194,7 @@
             </aside>
         </section>
         <section>
-            <h3 id="titre-activite">Activités à Marseille</h3>
+            <h4 id="titre-activite">Activités à Marseille</h4>
             <div id="activite">
                 <div class="bloc-activite">
                     <a href="">
