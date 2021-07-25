@@ -15,10 +15,11 @@ section {
 }
 h1, h2, h4 {
     font-family: 'ralewaybold', sans-serif;
+    font-weight: initial;
 }
 h3 {
     font-size: 16px;
-    font-weight: inherit;
+    font-weight: initial;
 }
 section h4 {
     font-size: 18px;
@@ -72,6 +73,7 @@ header {
 #titre-logo {
     font-family: 'Rancho', cursive, sans-serif;
     font-size: 38px;
+    font-weight: initial;
     margin-top: 40px;
     color: #0065FC;
     display: inline-block;
@@ -417,7 +419,7 @@ footer div ul li:first-child {
 @media all and (max-width: 1257px) {
     #titre-activite {
         margin: 20px auto;
-        max-width: 640px;
+        max-width: 620px;
     }
     #activite {
         justify-content: center;
