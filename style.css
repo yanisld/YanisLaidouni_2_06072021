@@ -95,9 +95,7 @@ nav ul {
     float: right;
     padding:45px 0 0 20px;
 }
-.list-menu a:hover {
-    color:#0065FC
-}
+.list-menu a:hover,
 .list-menu a:focus  {
     border-top:1px solid #0065FC;
     color: #0065FC;
@@ -529,6 +527,7 @@ footer div ul li:first-child {
         border-top:none;
         border-bottom:1px solid #f2f2f2;
     }
+    .list-menu a:hover,
     .list-menu a:focus  {
         border-top:none;
         border-bottom:1px solid #0065FC;
