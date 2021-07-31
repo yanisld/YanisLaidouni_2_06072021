@@ -5,7 +5,7 @@ body {
     font-size: 16px;
     line-height: 26px;
 }
-ul, h1, h2, h4 {
+ul, h1, h3 {
     margin:0;
     padding: 0;
 }
@@ -13,15 +13,15 @@ section {
     max-width: 1340px;
     margin:40px auto 0;  
 }
-h1, h2, h4 {
+h1, h3 {
     font-family: 'ralewaybold', sans-serif;
     font-weight: initial;
 }
-h3 {
+h2 {
     font-size: 16px;
     font-weight: initial;
 }
-section h4 {
+section h3 {
     font-size: 18px;
     margin:15px 0;
 }
@@ -69,6 +69,11 @@ li {
 header {
     max-width: 1340px;
     margin: auto;
+}
+#logo {
+    width: 100px;
+    height: auto;
+    margin-top: 40px;
 }
 #titre-logo {
     font-family: 'Rancho', cursive, sans-serif;
@@ -392,7 +397,8 @@ footer div ul li:first-child {
 }
 /* Responsive */
 @media all and (max-width: 1360px) {
-    #titre-logo {
+    #titre-logo,
+    #logo {
         margin:40px 0 0 20px;
     }
     #inscription {
