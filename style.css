@@ -75,14 +75,6 @@ header {
     height: auto;
     margin-top: 40px;
 }
-#titre-logo {
-    font-family: 'Rancho', cursive, sans-serif;
-    font-size: 38px;
-    font-weight: initial;
-    margin-top: 40px;
-    color: #0065FC;
-    display: inline-block;
-}
 nav {
     float: right;
 }
@@ -106,6 +98,10 @@ nav ul {
     color: #0065FC;
 }
 /* Recherche */
+#recherche {
+    margin: 0 0 15px 0;
+    display: flex;
+}
 #recherche .fa-map-marker-alt {
     background-color: #f2f2f2;
     padding: 17px;
@@ -121,12 +117,7 @@ nav ul {
     padding: 15px;
     border: 1px solid #0065FC;
     border-radius: 0 15px 15px 0;
-}
-#recherche #recherche-responsive {
-    display:none;
-    position: relative;
-    border-radius: 15px 15px 15px 15px;
-    right: 9px;
+    cursor: pointer;
 }
 #bloc-filtre, #filtre {
     display: flex;
@@ -155,6 +146,7 @@ nav ul {
     padding: 0px 19px 0px 0px;
     border: 2px solid #f2f2f2;
     border-radius: 25px;
+    cursor: pointer;
 }
 #filtre button:hover {
     background-color: #0065FC;
@@ -211,35 +203,27 @@ aside {
     border-radius: 25px 25px 0 0;
     width:246px;
 }
-#auberge-la-cannebiere {
-    background: url('images/hebergements/auberge-la-cannebiere.jpg');  
+.background-diposition {
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+}
+#auberge-la-cannebiere {
+    background-image: url('images/hebergements/auberge-la-cannebiere.jpg');  
 }
 #hotel-du-port {
-    background: url('images/hebergements/hotel-du-port.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/hotel-du-port.jpg');
 }
 #hotel-les-mouettes {
-    background: url('images/hebergements/hotel-les-mouettes.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/hotel-les-mouettes.jpg');
 }
 #hotel-de-la-mer {
-    background: url('images/hebergements/hotel-de-la-mer.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/hotel-de-la-mer.jpg');
 }
 #auberge-le-panier {
-    background: url('images/hebergements/auberge-le-panier.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/auberge-le-panier.jpg');
 }
 #hotel-chez-amina {
-    background: url('images/hebergements/hotel-chez-amina.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/hotel-chez-amina.jpg');
 }
 .carte .texte-carte {
     padding: 8px;
@@ -283,25 +267,23 @@ aside .img-carte {
     flex:1.3;
 }
 #hotel-le-soleil-du-matin {
-    background: url('images/hebergements/hotel-le-soleil-du-matin.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/hotel-le-soleil-du-matin.jpg');
 }
 #au-coeur-de-leau {
-    background: url('images/hebergements/au-coeur-de-leau.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/au-coeur-de-leau.jpg');
 }
 #hotel-tout-bleu {
-    background: url('images/hebergements/hotel-tout-bleu.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/hebergements/hotel-tout-bleu.jpg');
 }
 aside .carte-populaire .texte-carte {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding:8px;
     flex: 2;
+}
+.texte-carte-nuit {
+    flex:1;
 }
 /* Activites */
 #activite {
@@ -341,33 +323,22 @@ aside .carte-populaire .texte-carte {
     height: 390px;
 }
 #vieux-port {
-    background: url('images/activites/vieux-port.jpg');
-    background-position: center;
+    background-image: url('images/activites/vieux-port.jpg');
 }
 #pomegues {
-    background: url('images/activites/pomegues.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/activites/pomegues.jpg');
 }
 #frioul {
-    background: url('images/activites/frioul.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/activites/frioul.jpg');
 }
 #calanques {
-    background: url('images/activites/calanques.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/activites/calanques.jpg');
 }
 #notre-dame {
-    background: url('images/activites/notre-dame.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/activites/notre-dame.jpg');
 }
 #longchamp {
-    background: url('images/activites/longchamp.jpg');
-    background-position: center;
-    background-size: cover;
+    background-image: url('images/activites/longchamp.jpg');
 }
 .texte-activite {
     padding:5px;
@@ -397,7 +368,6 @@ footer div ul li:first-child {
 }
 /* Responsive */
 @media all and (max-width: 1360px) {
-    #titre-logo,
     #logo {
         margin:40px 0 0 20px;
     }
@@ -515,6 +485,11 @@ footer div ul li:first-child {
         width:100%;
     }
 }
+@media all and (min-width: 577px) {
+    #recherche .fa-search {
+        display: none;
+    }
+}
 @media all and (max-width: 576px) {
     nav {
         float: none;
@@ -539,13 +514,13 @@ footer div ul li:first-child {
         border-bottom:1px solid #0065FC;
     }
     #recherche {
-        text-align: center;
+        justify-content: center;
     }
-    #recherche #recherche-desktop {
+    #recherche input {
+        flex:1;
+    }
+    .txt-bouton-recherche {
         display:none;
-    }
-    #recherche #recherche-responsive {
-        display:initial;
     }
     .carte {
         max-width: 100%;
